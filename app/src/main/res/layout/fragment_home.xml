@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.HomeFragment">
+
+    <TextView
+        android:id="@+id/txtHomeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Home"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtBackStackCountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="BackStackCount: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtHomeTitle" />
+
+    <TextView
+        android:id="@+id/txtBackStackCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="0"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/txtBackStackCountLabel"
+        app:layout_constraintTop_toTopOf="@+id/txtBackStackCountLabel" />
+
+    <TextView
+        android:id="@+id/txtBackStackList"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:hint="BackStack List"
+        android:scrollbars="vertical"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentBackStack" />
+
+    <TextView
+        android:id="@+id/txtCurrentBackStackLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="CurrentBackStack: "
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/txtBackStackCountLabel"
+        app:layout_constraintTop_toBottomOf="@+id/txtBackStackCountLabel" />
+
+    <TextView
+        android:id="@+id/currentBackStack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:hint="Home"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/txtCurrentBackStackLabel"
+        app:layout_constraintTop_toTopOf="@+id/txtCurrentBackStackLabel" />
+
+    <Button
+        android:id="@+id/btnToFragA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="A"
+        app:layout_constraintEnd_toStartOf="@+id/btnToFragB"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBackStackList" />
+
+    <Button
+        android:id="@+id/btnToFragB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="B"
+        app:layout_constraintBottom_toBottomOf="@+id/btnToFragA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnToFragA"
+        app:layout_constraintTop_toTopOf="@+id/btnToFragA" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
